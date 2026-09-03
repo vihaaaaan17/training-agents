@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches and environments
+.pytest_cache/
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+.env
+.venv/
+venv/
+ENV/
+env/
+
+# Large model weights (Hugging Face Hub is used for hosting 5.2GB checkpoints)
+final_merged_model/
+weights/
+checkpoints/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.tar.gz
+*.zip
+inspect_logs/
+inspect_logs_base/
+output_*/
+
+# OS-specific files
+.DS_Store
+Thumbs.db

@@ -23,3 +23,16 @@ _Avoid_: Experiment trial, tuning run
 **Held-Out Eval Loss**:
 Validation cross-entropy loss evaluated on an unseen split of trace examples, used as the selection criterion for the best adapter.
 _Avoid_: Validation score, test loss
+
+**Tool Call Markup**:
+The canonical text serialization format (`<tool_call>{"name": ..., "arguments": ...}</tool_call>`) embedded directly inside an assistant turn's content to prevent chat template stripping.
+_Avoid_: Function metadata, raw tool dict
+
+**Tool Schema Injection**:
+The process of prepending a multi-turn session with explicit JSON definitions of available tools and the invocation protocol.
+_Avoid_: System prompt engineering, tool listing
+
+**Hybrid Trace Blend**:
+A curated training dataset comprising 70% workspace coding traces (`pi-mono`) and 30% general API tool-calling traces to ensure cross-domain generalization.
+_Avoid_: Mixed dataset, multi-task bag
+
